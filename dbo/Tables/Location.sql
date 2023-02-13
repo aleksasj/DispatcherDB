@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Location]
+(
+	[Id] BIGINT NOT NULL PRIMARY KEY IDENTITY,
+	[DriverId] INT NOT NULL,
+	[Latitude] FLOAT NOT NULL,
+	[Longitude] FLOAT NOT NULL,
+    [CreatedAt] DATETIME DEFAULT GETDATE(),
+	FOREIGN KEY (DriverId) REFERENCES [User](Id)
+)
