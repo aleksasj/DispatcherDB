@@ -7,7 +7,7 @@
 	PickupId INT NOT NULL,
 	DestinationId INT NOT NULL,
 	[Comment] TEXT NULL, 
-    [Status] TINYINT NULL DEFAULT 0, 
+    [Status] NUMERIC(2) NULL DEFAULT 0, 
     [UpdatedAt] DATETIME NULL, 
     [CreatedAt] DATETIME DEFAULT GETDATE(),
 	FOREIGN KEY (DriverId) REFERENCES [User](Id),

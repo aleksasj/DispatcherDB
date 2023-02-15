@@ -7,3 +7,4 @@
 	LEFT JOIN dbo.[Address] as p ON p.Id = o.PickupId
 	LEFT JOIN dbo.[Address] as d on d.Id = d.Id
 	LEFT JOIN dbo.[User] as u on u.Id = o.DriverId
+	GROUP BY o.Id
