@@ -7,5 +7,6 @@ BEGIN
 		[Status] = 2, 
 		UpdatedAt = GETDATE() 
 	WHERE
-		Id = @Id
+		[Status] = 1
+		AND Id = @Id
 END

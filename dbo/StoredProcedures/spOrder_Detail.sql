@@ -2,7 +2,7 @@
 	@Id INT
 AS
 BEGIN
-	SELECT *
-	FROM dbo.[vOrders_List]
-	WHERE Id = @Id
+	SELECT ol.*
+	FROM dbo.[vOrders_List] AS ol
+	WHERE ol.Id = @Id
 END

@@ -7,5 +7,6 @@ BEGIN
 		[Status] = 3, 
 		UpdatedAt = GETDATE() 
 	WHERE
-		Id = @Id
+		[Status] NOT IN (3, -1)
+		AND Id = @Id
 END

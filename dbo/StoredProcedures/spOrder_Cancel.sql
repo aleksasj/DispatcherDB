@@ -7,5 +7,6 @@ BEGIN
 		[Status] = -1, 
 		UpdatedAt = GETDATE() 
 	WHERE
-		Id = @Id
+		[Status] != 3
+		AND Id = @Id
 END

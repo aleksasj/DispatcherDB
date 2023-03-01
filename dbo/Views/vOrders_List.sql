@@ -5,6 +5,5 @@
 	p.Title AS PickupTitle, p.Latitude as PickupLatitude, p.Longitude as PickupLongitude
 	FROM dbo.[Order] AS o
 	LEFT JOIN dbo.[Address] as p ON p.Id = o.PickupId
-	LEFT JOIN dbo.[Address] as d on d.Id = d.Id
+	LEFT JOIN dbo.[Address] as d on d.Id = o.DestinationId
 	LEFT JOIN dbo.[User] as u on u.Id = o.DriverId
-	GROUP BY o.Id
