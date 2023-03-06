@@ -7,6 +7,7 @@
 AS
 BEGIN
 	INSERT INTO dbo.[Order] ([Name], Phone, PickupId, DestinationId, Comment, [Status])
+	OUTPUT INSERTED.*
 	VALUES (
 		@Name,
 		@Phone,
@@ -14,5 +15,5 @@ BEGIN
 		@DestinationId,
 		@Comment,
 		0
-	)
+	);
 END

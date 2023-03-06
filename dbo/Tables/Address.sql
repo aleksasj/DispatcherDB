@@ -1,7 +1,8 @@
 ﻿CREATE TABLE [dbo].[Address]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
-	[Title] NVARCHAR(255) NOT NULL UNIQUE,
+	[Title] NVARCHAR(MAX) NOT NULL,
 	[Latitude] FLOAT NOT NULL,
-	[Longitude] FLOAT NOT NULL
+	[Longitude] FLOAT NOT NULL,
+	CONSTRAINT UQ_cordinates UNIQUE ([Longitude], [Latitude])
 )

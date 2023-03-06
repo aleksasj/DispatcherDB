@@ -13,15 +13,6 @@
 	FOREIGN KEY (DriverId) REFERENCES [User](Id),
 	FOREIGN KEY (PickupId) REFERENCES [Address](Id),
 	FOREIGN KEY (DestinationId) REFERENCES [Address](Id),
-
 )
 
 GO
-
-CREATE TRIGGER [dbo].[Trigger_Order]
-    ON [dbo].[Order]
-    FOR DELETE, INSERT, UPDATE
-    AS
-    BEGIN
-        SET NoCount ON
-    END

@@ -5,11 +5,10 @@
 AS
 BEGIN
 	INSERT INTO dbo.[Address] (Title, Latitude, Longitude)
+	OUTPUT INSERTED.*
 	VALUES (
 		@Title,
 		@Latitude,
 		@Longitude
 	)
-	SET @id=SCOPE_IDENTITY()
-    RETURN  @id
 END
