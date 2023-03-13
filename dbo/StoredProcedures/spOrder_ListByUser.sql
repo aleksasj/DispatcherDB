@@ -2,12 +2,12 @@
 	@DriverId INT,
 	@Offset INT,
 	@Limit INT,
-	@Status nvarchar(max) 
+	@StatusIds nvarchar(max) 
 AS
 BEGIN
 	SELECT * FROM [dbo].vOrders_List
 	WHERE DriverId = @DriverId
-	AND [Status] IN (@Status)
+	AND [Status] IN (@StatusIds)
 	ORDER BY CreatedAt DESC
 	OFFSET @Offset ROWS
 	FETCH NEXT @Limit ROWS ONLY
